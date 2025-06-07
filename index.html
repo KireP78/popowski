@@ -9,12 +9,109 @@
  <meta name="robots" content="index, follow">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Професионален Фитнес Тренер | Кирил Поповски</title>
+    <title>Сертифициран Фитнес Тренер | Кирил Поповски</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/670gR6Hq/1000026436.png">
 
 
 
     <style>
+
+.faq-section {
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    color: #FFD700;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #FFD700;
+    text-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
+    letter-spacing: 1px;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+.faq-item {
+    margin: 15px auto;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 14px;
+    background: #121212;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 800px;
+}
+
+.faq-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px 60px 20px 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 215, 0, 0.03);
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #ccc;
+    background-color: #1a1a1a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: max-height 0.2s ease, padding 0.2s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 500px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 
 
 
@@ -29,16 +126,6 @@
     transform: translateX(-100%);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
         * {
@@ -111,6 +198,16 @@
             border: none;
         }
 
+
+/* Кога FAB е отворен (ротира во X) */
+#popupIcon.rotated {
+    transform: rotate(45deg);
+}
+
+
+
+
+
         #consultationPopup a:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
@@ -151,7 +248,7 @@
         }
 
         #popupIcon:hover {
-            transform: scale(1.1) rotate(90deg);
+            transform: scale(1.1) ;
             background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
             box-shadow: 0 7px 25px rgba(0,0,0,0.5);
         }
@@ -875,34 +972,41 @@
             to { transform: translateY(0); opacity: 1; }
         }
         
-      /* Responsive дизајн */
+   
+
+
+
+/* 📱 Респонзивен дизајн за мобилни уреди */
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
     }
-    
+
     header {
         height: 70px;
         padding: 0 15px;
     }
-    
+
     .nav-container {
-        padding: 0;
+        padding: 0 1.5rem;
         justify-content: space-between;
         width: 100%;
+        position: relative;
     }
-    
+
     .logo {
-        position: static;
-        transform: none;
+        position: relative;
+        left: -35px;
+        top: 10px;
         margin-right: 0;
+        transform: none;
     }
-    
+
     .logo-img {
-        height: 50px;
+        height: 160px;
         width: auto;
     }
-    
+
     .nav-links {
         display: none;
         position: fixed;
@@ -912,18 +1016,18 @@
         background: rgba(10, 10, 10, 0.98);
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 2rem 0;
         gap: 1.5rem;
         border-bottom: 1px solid rgba(255, 215, 0, 0.1);
         z-index: 1000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .nav-links.active {
         display: flex;
         animation: slideDown 0.3s ease-out;
     }
-    
+
     @keyframes slideDown {
         from {
             transform: translateY(-100%);
@@ -934,117 +1038,91 @@
             opacity: 1;
         }
     }
-    
 
-/* Responsive дизајн */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-            
-            header {
-                height: 70px;
-            }
-            
-            .nav-container {
-                padding: 0 1.5rem;
-            }
-            
-            .logo {
-                left: -35px;
-             position: relative; /* Осигурете се дека позицијата е релативна или апсолутна */
-             top: 10px; /* Прилагодете според висината на header-от */
+    .mobile-menu-btn {
+        display: block;
+    }
 
-            }
-            
-            .logo-img {
-                height: 160px;
-            }
-            
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                gap: 1.5rem;
-                border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 8rem 1rem;
-                background-position: center 60%;
-                background-attachment: scroll;
-            }
-            
-            .section {
-                padding: 4rem 1rem;
-            }
-            
-            .why-me, .survey-section {
-                padding: 2.5rem 1.5rem;
-            }
-            
-            .qual-card {
-                min-width: 100%;
-            }
-            
-            .collab-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .clients-counter {
-                flex-direction: column;
-                font-size: 3.5rem;
-            }
-            
-            .counter-number {
-                font-size: 4rem;
-                margin: 10px 0;
-            }
-            
-            .result-card {
-                min-width: 250px;
-            }
-        }
+    .menu-icon {
+        font-size: 2rem;
+        color: gold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
 
-        /* Scroll индикатор */
-        .scroll-indicator {
-            text-align: center;
-            color: var(--gold);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
+    .hero {
+        padding: 8rem 1rem;
+        background-position: center 60%;
+        background-attachment: scroll;
+    }
 
+    .section {
+        padding: 4rem 1rem;
+    }
 
+    .why-me,
+    .survey-section {
+        padding: 2.5rem 1.5rem;
+    }
 
-.nav-container {
-    justify-content: space-between;
-    position: relative;
+    .qual-card {
+        min-width: 100%;
+    }
+
+    .collab-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-counter {
+        flex-direction: column;
+        font-size: 3.5rem;
+    }
+
+    .counter-number {
+        font-size: 4rem;
+        margin: 10px 0;
+    }
+
+    .result-card {
+        min-width: 250px;
+    }
+
+    /* 📌 Pop-up респонзивност */
+    #consultationPopup {
+        width: 90vw;
+        left: 5vw;
+        right: 5vw;
+        bottom: 100px;
+        padding: 20px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    #consultationPopup h4 {
+        font-size: 1.1rem;
+    }
+
+    #consultationPopup a {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+
+    /* Поправка за popupIcon ако сакаш помал на мобилен */
+    #popupIcon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 .nav-cta {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    margin-left: 0 !important;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
 }
-
 
 
 
@@ -1101,7 +1179,9 @@
                     <a href="#contact">Контакт</a>
                 </div>
                 <a href="#survey" class="nav-cta">Закажи сега</a>
-                <button class="mobile-menu-btn">☰</button>
+<button class="mobile-menu-btn">
+  <span class="menu-icon">☰</span>
+</button>
             </nav>
         </div>
 </header>
@@ -1110,8 +1190,8 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Тимот што губи само <span class="highlight">КИЛОГРАМИ!</span></h1>
-            <p>Научно базирани програми дизајнирани <span class="highlight">исклучиво за вас</span>, за да ги постигнете резултатите кои што ги заслужувате!</p>
-            <a href="#survey" class="btn btn-primary pulse">Закажете бесплатна консултација</a>
+            <p>Научно базирани програми дизајнирани <span class="highlight">исклучиво за вас</span>, за да ги постигнете резултатите што ги заслужувате!</p>
+            <a href="#survey" class="btn btn-primary pulse">Закажете бесплатeн прв тренинг</a>
         </div>
     </section>
     
@@ -1189,7 +1269,7 @@
 
 
          <div class="result-card">
-                <img src="https://i.ibb.co/gb1nW5ZY/Grid-Art-20250513-013448845.jpg" alt="Трансформација на Ѓургица - фитнес трансформација за 3 месеци" class="result-img">
+                <img src="https://i.ibb.co/YFR7ZLBv/Grid-Art-20250608-015136662.jpg" alt="Трансформација на Ѓургица - фитнес трансформација за 3 месеци" class="result-img">
                 <div class="result-info">
                     <h3>Марија</h3>
                     <p><span class="highlight">Фитнес трансформација за 2 месеци</span></p>
@@ -1293,10 +1373,52 @@
                 <p class="survey-text">Пополнувањето <span class="highlight">на оваа кратка анкета </span>е првиот и најважен чекор кон твојата целосна трансформација. За само неколку минути, ќе добијам увид во твоите цели и потреби, и ќе креирам индивидуален план што совршено ќе ти одговара.
 
  </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_IHjE03aE8sIyCpR57_yyyXSVFEzPS5Un9hbCG7mh0rhYrg/viewform?usp=header" class="btn btn-primary" target="_blank">Пополнете ја анкетата</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_IHjE03aE8sIyCpR57_yyyXSVFEzPS5Un9hbCG7mh0rhYrg/viewform?usp=header" class="btn btn-primary" target="_blank">Закажи веднаш!</a>
             </div>
         </div>
     </section>
+
+
+
+
+
+<section class="faq-section">
+    <h2>Најчесто поставувани прашања</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">Каков тип на тренинг нудиш и како се спроведува?</div>
+        <div class="faq-answer">Нудам персонализирани тренинзи со физичко присуство во теретана во Скопје, како и онлајн програми со детални видеа, планови и поддршка преку пораки или видео консултации.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Дали програмата е соодветна ако никогаш не сум вежбал/а?</div>
+        <div class="faq-answer">Да, апсолутно. Секој клиент започнува од ниво соодветно на неговата кондиција, со јасни објаснувања, демонстрации и корекција на техника.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Колку пати неделно се одржуваат тренинзите?</div>
+        <div class="faq-answer">Физичките тренинзи обично се 2–4 пати неделно, во договорени термини. Онлајн клиентите добиваат неделен распоред што можат сами да го следат според своето време.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Дали добивам план за исхрана со програмата?</div>
+        <div class="faq-answer">Да, секој клиент добива персонализиран план за исхрана според целта – слабеење, обликување или добивање мускулна маса. Планот се менува според напредокот.</div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Задоволни клиенти -->
     <section class="clients-section">
@@ -1314,6 +1436,31 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Контакт -->
     <section id="contact" class="section">
@@ -1346,10 +1493,7 @@
     <script>
 
 
-
-
-
-        // Toggle Pop-up функција
+  // Toggle Pop-up функција
         function togglePopup() {
             const popup = document.getElementById('consultationPopup');
             const popupIcon = document.getElementById('popupIcon');
@@ -1371,7 +1515,7 @@
                     popup.style.transform = 'translateY(0)';
                 }, 10);
                 popupIcon.textContent = '×';
-                popupIcon.style.transform = 'rotate(45deg)';
+                popupIcon.style.transform = 'rotate(90deg)';
             }
         }
 
@@ -1387,6 +1531,7 @@
                 }
             }
         });
+
 
         // Бројач на клиенти
         function animateCounter() {
@@ -1420,19 +1565,20 @@
             const header = document.getElementById('header');
             
             // Мобилен мени toggle
-            if (mobileBtn && navLinks) {
-                mobileBtn.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                });
-                
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        if (window.innerWidth <= 768) {
-                            navLinks.classList.remove('active');
-                        }
-                    });
-                });
-            }
+           if (mobileBtn && navLinks) {
+    const menuIcon = document.querySelector('.menu-icon');
+
+    mobileBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+
+        // Менување на иконата ☰ ↔ ×
+         if (navLinks.classList.contains('active')) {
+            menuIcon.textContent = '×';
+        } else {
+            menuIcon.textContent = '☰';
+        }
+    });
+}
             
             // Анимации при скролување
             function checkVisibility() {
@@ -1484,7 +1630,26 @@
                     togglePopup();
                 }
             }, 4000);
+        }); 
+
+
+
+
+
+document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
         });
+    });
+
+
+
+
+
+
+
+   
     </script>
 </body>
 </html>
