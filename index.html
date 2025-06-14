@@ -710,6 +710,52 @@
             top: -20px;
             left: -15px;
         }
+
+
+
+
+
+.scroll-indicator {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 25px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    text-align: center;
+    margin: 0 auto 1rem;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    animation: bounce-horizontal 2s infinite ease-in-out;
+    cursor: default;
+}
+@keyframes bounce-horizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         /* Нова секција - Типови на соработка */
         .collab-section {
@@ -1154,8 +1200,8 @@
    <!-- Консултација -->
 
     <div id="consultationPopup">
-        <h4>Закажете бесплатна консултација</h4>
-        <p>Пополнете ја анкетата и ќе ве контактираме во најкраток рок!</p>
+        <h4>Биди дел од тимот Кирил!</h4>
+        <p>Не знаеш од каде да започнеш? Закажи бесплатна консултација!</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuQQMQyKbzOy3N97TSVYsJyvWGgmY_DsDJQSksCqB6jeeiPg/viewform?usp=header" target="_blank">Закажи сега</a>
     </div>
 
@@ -1234,12 +1280,12 @@
     <!-- Секција за Реални Трансформации -->
     <section id="results" class="section">
         <h2 class="section-title">Реални Трансформации</h2>
-        <div class="scroll-indicator">← Скролувај десно за повеќе →</div>
+        <div class="scroll-indicator"> Скролувај десно за повеќе →</div>
         
         <div class="results-container">
             <!-- Вашата оригинална трансформација -->
             <div class="result-card">
-                <img src="https://i.ibb.co/xSBcMMSg/Screenshot-20250606-231316-Instagram.jpg" alt="Трансформација на Игор Стојанов-Баркли -15kg за 12 недели" class="result-img">
+                <img src="https://i.ibb.co/xSBcMMSg/Screenshot-20250606-231316-Instagram.jpg" alt="Трансформација на Игор Стојанов-Баркли -20kg за 16 недели" class="result-img">
                 <div class="result-info">
                     <h3>Игор Стојанов-Баркли</h3>
                     <p><span class="highlight">-15kg за 10 недели</span></p>
@@ -1256,9 +1302,9 @@
                 </div>
             </div>
 
-           
-        
-           <div class="result-card">
+
+         
+     <div class="result-card">
                 <img src="https://i.ibb.co/b5KfQ5Dp/Grid-Art-20250523-014635689.jpg" alt="Трансформација на Нена - покачување мускулна маса" class="result-img">
                 <div class="result-info">
                     <h3>Петар</h3>
@@ -1268,15 +1314,31 @@
             </div>
 
 
+
+
          <div class="result-card">
-                <img src="https://i.ibb.co/YFR7ZLBv/Grid-Art-20250608-015136662.jpg" alt="Трансформација на Ѓургица - фитнес трансформација за 3 месеци" class="result-img">
+                <img src="https://i.ibb.co/YFR7ZLBv/Grid-Art-20250608-015136662.jpg" alt="Трансформација на Барда - фитнес трансформација за 3 месеци" class="result-img">
                 <div class="result-info">
-                    <h3>Марија</h3>
+                    <h3>Барда</h3>
                     <p><span class="highlight">Фитнес трансформација за 2 месеци</span></p>
                     <p class="result-quote">"Долго време се мачев без резултати.Со Кирил ги постигнав целите!"</p>
                 </div>
             </div>
 
+
+
+
+ <div class="result-card">
+                <img src="https://i.ibb.co/gZdJschd/Grid-Art-20250608-141704836.jpg" alt="Трансформација на Кирил - покачување мускулна маса" class="result-img">
+                <div class="result-info">
+                    <h3>Кирил</h3>
+                    <p><span class="highlight">Истото тело. Нов ум. Нов живот.</span></p>
+                    <p class="result-quote">"Се почнува со една одлука – и завршува со нов живот"</p>
+                </div>
+            </div>
+
+
+        
 
             <div class="result-card">
                 <img src="https://i.ibb.co/jPn6N6w5/Grid-Art-20250523-015446259.jpg" alt="Трансформација на Давид - подобрување на силата за 120%" class="result-img">
@@ -1386,8 +1448,8 @@
     <h2>Најчесто поставувани прашања</h2>
 
     <div class="faq-item">
-        <div class="faq-question">Каков тип на тренинг нудиш и како се спроведува?</div>
-        <div class="faq-answer">Нудам персонализирани тренинзи со физичко присуство во теретана во Скопје, како и онлајн програми со детални видеа, планови и поддршка преку пораки или видео консултации.</div>
+        <div class="faq-question">Каков е концептот на тренингот што го нудиш и како функционира? </div>
+        <div class="faq-answer">Нудам персонализирани тренинзи со физичко присуство во теретана, како и онлајн програми со детални видеа, планови и поддршка преку пораки или видео консултации.</div>
     </div>
 
     <div class="faq-item">
@@ -1397,7 +1459,7 @@
 
     <div class="faq-item">
         <div class="faq-question">Колку пати неделно се одржуваат тренинзите?</div>
-        <div class="faq-answer">Физичките тренинзи обично се 2–4 пати неделно, во договорени термини. Онлајн клиентите добиваат неделен распоред што можат сами да го следат според своето време.</div>
+        <div class="faq-answer">Физичките тренинзи обично се 3–6 пати неделно, во договорени термини. Онлајн клиентите добиваат неделен распоред што можат сами да го следат според своето време.</div>
     </div>
 
     <div class="faq-item">
@@ -1471,8 +1533,8 @@
                 <a href="tel:+38975677427" style="color: var(--gold); text-decoration: none; font-size: 1.2rem;">
                     <i class="fas fa-phone" style="margin-right: 10px;"></i> +389 75 677 427
                 </a>
-                <a href="mailto:kirilpopovski03@gmail.com" style="color: var(--gold); text-decoration: none; font-size: 1.2rem;">
-                    <i class="fas fa-envelope" style="margin-right: 10px;"></i> kirilpopovski03@gmail.com
+                <a href="mailto:kirilpopovski@hotmail.com" style="color: var(--gold); text-decoration: none; font-size: 1.2rem;">
+                    <i class="fas fa-envelope" style="margin-right: 10px;"></i> kirilpopovski@hotmail.com
                 </a>
             </div>
         </div>
@@ -1486,7 +1548,7 @@
             <a href="https://mk-mk.facebook.com/kire.twiner" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
-        <p>Контакт: kirilpopovski03@gmail.com | +389 75 677 427</p>
+        <p>Контакт: kirilpopovski@hotmail.com | +389 75 677 427</p>
         <p class="copyright">© 2025 Сите права се задржани.</p>
     </footer>
 
@@ -1564,21 +1626,48 @@
             const sections = document.querySelectorAll('.section');
             const header = document.getElementById('header');
             
-            // Мобилен мени toggle
-           if (mobileBtn && navLinks) {
+          
+
+
+
+
+if (mobileBtn && navLinks) {
     const menuIcon = document.querySelector('.menu-icon');
 
+    // Toggle при клик на копчето
     mobileBtn.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
+        const isActive = navLinks.classList.toggle('active');
+        menuIcon.textContent = isActive ? '×' : '☰';
+    });
 
-        // Менување на иконата ☰ ↔ ×
-         if (navLinks.classList.contains('active')) {
-            menuIcon.textContent = '×';
-        } else {
-            menuIcon.textContent = '☰';
-        }
+    // Автоматско затворање кога се клика на линк
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuIcon.textContent = '☰'; // Сигурно се враќа во hamburger
+        });
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
             // Анимации при скролување
             function checkVisibility() {
@@ -1591,6 +1680,17 @@
                     }
                 });
             }
+
+
+
+
+
+
+
+
+
+
+
 
 
  // Провери дали секцијата со бројачот е видлива
